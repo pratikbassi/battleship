@@ -2,7 +2,7 @@ let make = require('./makeGrid.js');
 let add = require('./makeShip');
 
 
-const init = function () {
+const init = function() {
   let grid1 = make.makeGrid(10);
   let grid2 = make.makeGrid(10);
 
@@ -11,6 +11,7 @@ const init = function () {
   
   console.log(grid1);
 
-}
+  
+};
 
 init();

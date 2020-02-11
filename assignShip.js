@@ -1,4 +1,4 @@
-const assignShip = exports.assignShip = function (boat) {
+const assignShip = function(boat) {
 
   console.log(`BOAT ${boat}`);
 
@@ -20,9 +20,11 @@ const assignShip = exports.assignShip = function (boat) {
   } else if (boat === 'car') {
     shipType = '5';
     shipDes = 5;
-  } else{
+  } else {
     throw new Error(`INVALID SHIP NAME ${boat}`);
   }
 
   return [shipDes, shipType];
-}
+};
+
+module.exports = assignShip;
