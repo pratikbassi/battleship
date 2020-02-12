@@ -1,12 +1,12 @@
-const assign = require('./assignShip.js');
+const assignShip = require('./assignShip');
 
 
 const makeShip = function(ocean, position1, position2, shipName) {
 
   let delta = (Math.abs(position1[0] - position2[0]) + Math.abs(position1[1] - position2[1]));
   
-  let shipDes = assign.assignShip(shipName)[0];
-  let shipType = assign.assignShip(shipName)[1];
+  let shipDes = assignShip(shipName)[0];
+  let shipType = assignShip(shipName)[1];
 
 
   if (position1[0] < 10 && position1[1] < 10 && position2[0] < 10 && position2[1] < 10 && delta + 1 === shipType) {

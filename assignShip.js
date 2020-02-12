@@ -18,8 +18,8 @@ const assignShip = function(boat) {
     shipType = 4;
     shipDes = 'B';
   } else if (boat === 'car') {
-    shipType = '5';
-    shipDes = 5;
+    shipType = 5;
+    shipDes = 'C';
   } else {
     throw new Error(`INVALID SHIP NAME ${boat}`);
   }
