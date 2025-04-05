@@ -7,6 +7,6 @@ class Player:
 
         self.name = name
         self.board = Board(size)
-        for (name, coord, direction) in shipsToMake:
-            ship = Ship(name, coord, direction)
-
+        for ship in shipsToMake:
+            ship = Ship(ship[0], ship[1], ship[2])
+            self.board.addShip(ship)
