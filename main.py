@@ -11,6 +11,10 @@ if __name__ == "__main__":
     else:
         player1 = input("Enter player one's name: ").strip()
         player2 = input("Enter player two's name: ").strip()
+        while not player1 or not player2:
+            print("Both players must have names.")
+            player1 = input("Enter player one's name: ").strip()
+            player2 = input("Enter player two's name: ").strip()
         game = True
         while game:
             curGame = Game([player1, player2])
