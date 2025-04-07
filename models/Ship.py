@@ -10,9 +10,11 @@ class Ship:
         }
         self.name = name
         self.size = self.shipData[name]
-        self.coords = coords
+        self.coords = {coords}
+        self.hits = set()
         self.direction = direction
         self.destroyed = False
+        self.startCoord = coords
 
     def __str__(self):
-        return f"Ship: {self.name}, Size: {self.size}, Destroyed: {self.destroyed}"
+        return f"Ship: {self.name}, Size: {self.size}, Destroyed: {self.destroyed}, Coordinates: {self.coords}, Hits: {self.hits}, Direction: {self.direction}"
