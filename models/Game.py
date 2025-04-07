@@ -1,4 +1,5 @@
 from models.Player import Player
+from time import sleep
 SHIPS = [
     ("Carrier", (0, 0), "H"),
     ("Battleship", (1, 0), "H"),
@@ -43,7 +44,7 @@ class Game:
             print(f"{currentPlayer.name} wins!")
             return True
         else:
-            print(f"{currentPlayer.name} shot at ({row}, {column}) and hit {targetPlayer.board.shots[(row, column)]}.")
+            print(f"{currentPlayer.name} shot at ({row}, {column}) and {targetPlayer.board.shots[(row, column)]}.")
             targetPlayer.board.printBoard(showShots=True)
             return False
 
@@ -51,8 +52,11 @@ class Game:
         while True:
             if self.__runTurn(self.player1, self.player2):
                 break
+            sleep(3)
+
             if self.__runTurn(self.player2, self.player1):
                 break
+            sleep(3)
 
     def __gameOver(self):
         return self.player1.board.checkAllShipsDestroyed() or self.player2.board.checkAllShipsDestroyed()
