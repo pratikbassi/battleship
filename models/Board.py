@@ -25,7 +25,6 @@ class Board:
         print("\n")
 
     def addShip(self, ship):
-        print(ship)
         shipCoords = self.__getShipCoords(ship.size, ship.startCoord, ship.direction)
         # Check if the coordinates are valid
         valid = True

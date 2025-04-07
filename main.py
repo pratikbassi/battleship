@@ -1,5 +1,6 @@
 from models.Game import Game
 from tests.Test import TestRunner
+from time import sleep
 
 if __name__ == "__main__":
     command = input("Enter 'test' to run tests or anything else to start a game: ").strip().lower()
@@ -18,6 +19,7 @@ if __name__ == "__main__":
         game = True
         while game:
             curGame = Game([player1, player2])
+            sleep(3)
             keepPlaying = input("Do you want to play again? (y/n): ").strip().lower()
             if keepPlaying == 'y':
                 continue

@@ -13,7 +13,9 @@ class Game:
         self.player2 = None
         self.player1 = None
         print("Initializing game...")
+        sleep(3)
         self.startGame(playerNames)
+        sleep(3)
         print("Game initialized.")
         self.play()
 
